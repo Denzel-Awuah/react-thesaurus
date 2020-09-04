@@ -1,0 +1,42 @@
+.Button {
+	color: black;
+	width: 25%;
+	height: 16%;
+	font-size: 6vmin;
+	border-color: black;
+}
+
+.Buttons {
+	color: black;
+	width: 10%;
+	height: 16%;
+	font-size: 6vmin;
+	border-color: black;
+}
+
+.Button:focus {
+	outline: 0px;
+}
+
+.Button:active {
+	opacity: 0.5;
+}
+
+.BlackButton {
+	background-color: #dd4702;	
+}
+
+.GrayButton {
+	background-color: #0016df;
+}
+
+.OrangeButton {	
+	background-color: #04eb23;	
+}
+
+.LargeButton {
+	width: 100%;
+	text-align: center;
+	padding-left: 12%;
+	background-color: green;
+}
