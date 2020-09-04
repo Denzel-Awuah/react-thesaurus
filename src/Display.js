@@ -4,11 +4,8 @@ import './Display.css';
 
 class Display extends React.Component {
 
-  
-
   submitEvent(event){
     event.preventDefault();
-        
   }
 
     render() {

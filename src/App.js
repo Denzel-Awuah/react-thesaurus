@@ -1,15 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import mainpage from './mainpage.js';
-
+import Mainpage from './Mainpage.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
-       <mainpage />
-   
-    
-  );
+  return <Mainpage />;
 }
 
 export default App;

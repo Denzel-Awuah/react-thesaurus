@@ -1,84 +1,21 @@
 import React from 'react';
 import Display from './Display.js';
-import Button from './Button.js';
+import Words from './Words.js';
 
-import './mainpage.css';
+import './Mainpage.css';
 
-class mainpage extends React.Component {
+class Mainpage extends React.Component {
 
+   
 
     render() {
 
         return (
 
-            <div className="Calculator">
+            <div className="App">
 
-                <Display display={this.state.display} />
-
-
-
-                <Button value="Means Like" className="Button BlackButton" onClick={this.handleButtonClick} />
-                <Button value="Rhymes With" className="Button BlackButton" onClick={this.handleButtonClick} />
-                <Button value="Starts With" className="Button BlackButton" onClick={this.handleButtonClick} />
-                <Button value="Sounds Like" className="Button BlackButton" onClick={this.handleButtonClick} />
-
-                <br />
-
-                <Button  id="theWord" value="Results for word ___" className="Button LargeButton" onClick={this.handleButtonClick} />
-               
-                <br />
-
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-
-                <br />
-
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-
-                <br />
-
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-
-                <br />
-
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton " onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-                <Button value="" className="Buttons GrayButton" onClick={this.handleButtonClick} />
-
-
+                <Display />
+                <Words />
 
             </div>
 
@@ -89,4 +26,4 @@ class mainpage extends React.Component {
 
 }
 
-export default mainpage;
+export default Mainpage;

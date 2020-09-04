@@ -1,4 +1,4 @@
-.Button {
+.Words {
 	color: black;
 	width: 25%;
 	height: 16%;
@@ -6,7 +6,7 @@
 	border-color: black;
 }
 
-.Buttons {
+.Wordss {
 	color: black;
 	width: 10%;
 	height: 16%;
@@ -14,27 +14,27 @@
 	border-color: black;
 }
 
-.Button:focus {
+.Words:focus {
 	outline: 0px;
 }
 
-.Button:active {
+.Words:active {
 	opacity: 0.5;
 }
 
-.BlackButton {
+.BlackWords {
 	background-color: #dd4702;	
 }
 
-.GrayButton {
+.GrayWords {
 	background-color: #0016df;
 }
 
-.OrangeButton {	
+.OrangeWords {	
 	background-color: #04eb23;	
 }
 
-.LargeButton {
+.LargeWords {
 	width: 100%;
 	text-align: center;
 	padding-left: 12%;
