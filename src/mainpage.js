@@ -1,12 +1,11 @@
 import React from 'react';
 import Display from './Display.js';
-import Words from './Words.js';
-
 import './Mainpage.css';
+import Engine from './Engine.js';
 
 class Mainpage extends React.Component {
 
-   
+  
 
     render() {
 
@@ -15,7 +14,7 @@ class Mainpage extends React.Component {
             <div className="App">
 
                 <Display />
-                <Words />
+                
 
             </div>
 
