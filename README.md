@@ -29,6 +29,9 @@ This app is used to generate a collection of words based on the word/phrase that
 - Once word is changed, operations can be performed on the new word
 
 
+<br />
+
+
 ## Available Scripts
 
 In the project directory, you can run:
