@@ -1,6 +1,6 @@
 import React from 'react';
 import './Display.css';
-import Engine from './Engine.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Display extends React.Component {
 
@@ -22,7 +22,7 @@ class Display extends React.Component {
        button37: "", button38: "", button39: "", button40: "",
        button41: "", button42: "", button43: "", button44: "",
        button45: "", button46: "", button47: "", button48: "",
-      engine: new Engine(), 
+     
      }
 
      //Event Methods
@@ -30,6 +30,8 @@ class Display extends React.Component {
      this.submitEvent = this.submitEvent.bind(this);
      this.meansLike = this.meansLike.bind(this);
      this.ryhmesWith = this.ryhmesWith.bind(this);
+     this.synonyms = this.synonyms.bind(this);
+     this.antonyms = this.antonyms.bind(this);
      this.startsWith = this.startsWith.bind(this);
      this.soundsLike = this.soundsLike.bind(this);
      this.changeWord = this.changeWord.bind(this);
@@ -164,9 +166,9 @@ addWords(data){
 }
 
 
+//----Operation Buttons-----\\
 
-
-//handles Means like button
+//Handles Means like button
 meansLike(event){
   event.preventDefault();
   const tvalue = this.state.value;
@@ -184,9 +186,7 @@ meansLike(event){
     .catch(err => console.log(err));
   }
 }
-
-
-//Handles Ryymes with button
+//Handles Ryhmes with button
 ryhmesWith(event){
   event.preventDefault();
   const tvalue = this.state.value;
@@ -205,7 +205,6 @@ ryhmesWith(event){
     .catch(err => console.log(err));
   }
 }
-
 //Handles Starts with button
 startsWith(event){
   event.preventDefault();
@@ -224,7 +223,6 @@ startsWith(event){
     .catch(err => console.log(err));
   }
 }
-
 //Handles Sounds Like Button
 soundsLike(event){
   event.preventDefault();
@@ -243,11 +241,51 @@ soundsLike(event){
     .catch(err => console.log(err));
   }
 }
+//Handles Synonyms button
+synonyms(event){
+  event.preventDefault();
+  const tvalue = this.state.value;
+  if(tvalue == "" || tvalue == null){
+    alert("You must enter a word first!");
+  }
+  else{
+    fetch("https://api.datamuse.com	/words?rel_syn="+this.state.value)
+    .then(res => res.json())
+    .then(data => {
+      this.clearWords();
+      console.log(data);
+      this.addWords(data);
+      
+    })
+    .catch(err => console.log(err));
+  }
+}
+//Handles Antonyms button
+antonyms(event){
+  event.preventDefault();
+  const tvalue = this.state.value;
+  if(tvalue == "" || tvalue == null){
+    alert("You must enter a word first!");
+  }
+  else{
+    fetch("https://api.datamuse.com	/words?rel_ant="+this.state.value)
+    .then(res => res.json())
+    .then(data => {
+      this.clearWords();
+      console.log(data);
+      this.addWords(data);
+      
+    })
+    .catch(err => console.log(err));
+  }
+}
 
 
+//Updates word when user is typing
 changeWord(event){
   this.setState({value: event.target.innerHTML});
 }
+
 
 
 
@@ -262,11 +300,7 @@ changeWord(event){
                 <input id="word-input" value={this.state.value} onChange={this.handleChange} className="Display" type="text"  placeholder="Enter initial word..." ></input>
             </form>
 
-              <div className="words">
-                  <a href="#" id="related-word"  onClick={this.fetchWords}></a>
-                  <p id="history" className="historyWords" ref={(el) => this.history = el}></p>
-              </div>
-
+             
               
 
 
@@ -279,9 +313,18 @@ changeWord(event){
                   <button onClick={this.ryhmesWith} className="operationBtns">Rhymes With</button>
                   <button onClick={this.startsWith}className="operationBtns">Starts With</button>
                   <button onClick={this.soundsLike}className="operationBtns">Sounds Like</button>
+                  <button onClick={this.synonyms}className="operationBtns">Synonyms</button>
+                  <button onClick={this.antonyms}className="operationBtns">Antonyms</button>
             </div>
 
+            <br/>           
             <br/>
+            <br/>           
+            <br/>
+            
+          
+
+          <h3>&#8593; Select an operation to perform on a word/phrase &#8593;</h3>
           
          <div className="container thepage">
          <br/>

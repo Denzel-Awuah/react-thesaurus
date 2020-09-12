@@ -47,7 +47,7 @@
 	-webkit-transform: rotate(35deg);
 			transform: rotate(35deg);
 	width: 50px;
-	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+	transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
 	z-index: 1;
   }
   .raise:hover:after {
@@ -73,7 +73,7 @@
 
 .theword{
 	color: Blue;
-	font-size: 14vmin;
+	font-size: 10vmin;
 }
 
 .Display {
