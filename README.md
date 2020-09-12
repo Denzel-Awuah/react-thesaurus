@@ -3,7 +3,7 @@ This app is used to generate a collection of words based on the word/phrase that
 
 App preview
 
-![Application](/images/logo192.png)
+![Application](/public/wordApp.png)
 
 
 ## Available Scripts
