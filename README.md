@@ -4,16 +4,16 @@ This app is used to generate a collection of words based on the word/phrase that
 App preview
 ![Application](/public/wordApp.png)
 
-
+<br />
 ## Operation Buttons
 ![Application](/public/operations.png)
 
-Similar Meaning: Generates words with a similar meaning to the entered word <br />
-Rhymes With: Generates words that rhyme with the entered word      <br />
-Starts With: Uses the entered word to generate words that begin with that prefix       <br />
-Sounds Like: Generates words that sound like the entered word      <br />  
-Synonyms: Generates a list of synonyms to the entered word         <br />
-Antonyms: Generates a list of antonyms to the entered word         <br />
+- Similar Meaning: Generates words with a similar meaning to the entered word <br />
+- Rhymes With:     Generates words that rhyme with the entered word      <br />
+- Starts With:     Uses the entered word to generate words that begin with that prefix       <br />
+- Sounds Like:     Generates words that sound like the entered word      <br />  
+- Synonyms:        Generates a list of synonyms to the entered word         <br />
+- Antonyms:        Generates a list of antonyms to the entered word         <br />
 
 
 
