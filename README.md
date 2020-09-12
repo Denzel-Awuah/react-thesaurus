@@ -1,6 +1,11 @@
 ## Welcome to the React Word Processor App
 This app is used to generate a collection of words based on the word/phrase that the user inputs. Users have 6 different operations that they can perform on their entered word/phrase.
 
+App preview
+
+![Application](/images/logo192.png)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
