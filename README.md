@@ -5,7 +5,9 @@ App preview
 ![Application](/public/wordApp.png)
 
 <br />
+
 ## Operation Buttons
+
 ![Application](/public/operations.png)
 
 - Similar Meaning: Generates words with a similar meaning to the entered word <br />
