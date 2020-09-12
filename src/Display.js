@@ -171,7 +171,7 @@ addWords(data){
 //Handles Means like button
 meansLike(event){
   event.preventDefault();
-  const tvalue = this.state.value;
+  const tvalue = this.state.value.trim;
   if(tvalue == "" || tvalue == null){
     alert("You must enter a word first!");
   }
@@ -181,7 +181,7 @@ meansLike(event){
     .then(data => {
       this.clearWords();
       this.addWords(data);
-      console.log(data);
+      
     })
     .catch(err => console.log(err));
   }
@@ -189,7 +189,7 @@ meansLike(event){
 //Handles Ryhmes with button
 ryhmesWith(event){
   event.preventDefault();
-  const tvalue = this.state.value;
+  const tvalue = this.state.value.trim;
   if(tvalue == "" || tvalue == null){
     alert("You must enter a word first!");
   }
@@ -198,7 +198,6 @@ ryhmesWith(event){
     .then(res => res.json())
     .then(data => {
       this.clearWords();
-      console.log(data);
       this.addWords(data);
       
     })
@@ -208,7 +207,7 @@ ryhmesWith(event){
 //Handles Starts with button
 startsWith(event){
   event.preventDefault();
-  const tvalue = this.state.value;
+  const tvalue = this.state.value.trim;
   if(tvalue == "" || tvalue == null){
     alert("You must enter a word first!");
   }
@@ -218,7 +217,7 @@ startsWith(event){
     .then(data => {
       this.clearWords();
       this.addWords(data);
-      console.log(data);
+      
     })
     .catch(err => console.log(err));
   }
@@ -226,7 +225,7 @@ startsWith(event){
 //Handles Sounds Like Button
 soundsLike(event){
   event.preventDefault();
-  const tvalue = this.state.value;
+  const tvalue = this.state.value.trim;
   if(tvalue == "" || tvalue == null){
     alert("You must enter a word first!");
   }
@@ -236,7 +235,6 @@ soundsLike(event){
     .then(data => {
       this.clearWords();
       this.addWords(data);
-      console.log(data);
     })
     .catch(err => console.log(err));
   }
@@ -244,7 +242,7 @@ soundsLike(event){
 //Handles Synonyms button
 synonyms(event){
   event.preventDefault();
-  const tvalue = this.state.value;
+  const tvalue = this.state.value.trim;
   if(tvalue == "" || tvalue == null){
     alert("You must enter a word first!");
   }
@@ -253,7 +251,6 @@ synonyms(event){
     .then(res => res.json())
     .then(data => {
       this.clearWords();
-      console.log(data);
       this.addWords(data);
       
     })
@@ -263,7 +260,7 @@ synonyms(event){
 //Handles Antonyms button
 antonyms(event){
   event.preventDefault();
-  const tvalue = this.state.value;
+  const tvalue = this.state.value.trim;
   if(tvalue == "" || tvalue == null){
     alert("You must enter a word first!");
   }
@@ -272,7 +269,6 @@ antonyms(event){
     .then(res => res.json())
     .then(data => {
       this.clearWords();
-      console.log(data);
       this.addWords(data);
       
     })
