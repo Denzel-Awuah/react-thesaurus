@@ -14,8 +14,8 @@ App preview
 - Rhymes With:     Generates words that rhyme with the entered word      <br />
 - Starts With:     Uses the entered word to generate words that begin with that prefix       <br />
 - Sounds Like:     Generates words that sound like the entered word      <br />  
-- Synonyms:        Generates a list of synonyms to the entered word         <br />
-- Antonyms:        Generates a list of antonyms to the entered word         <br />
+- Synonyms:        Generates a list of synonyms for entered words        <br />
+- Antonyms:        Generates a list of antonyms for entered word         <br />
 
 
 
