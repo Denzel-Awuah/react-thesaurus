@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
-import Mainpage from './Mainpage.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Display from './Display';
 
 function App() {
-  return <Mainpage />;
+  return <div className="App">
+
+  <Display />
+
+</div>
 }
 
 export default App;
