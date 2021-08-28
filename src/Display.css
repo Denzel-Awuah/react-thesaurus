@@ -60,30 +60,42 @@
   }
 
 
+  
+  .wordprocessor{
+	  background-color: rgba(255, 255, 255, 0.945);
+	  height: 1280px;
+  }
 
 
 .title{
-	color: rgb(248, 248, 248);
+	color: rgb(0, 0, 0);
 	padding-bottom: 20px;
 }
 
 
 .notification-box{
-	background-color: rgb(32, 163, 14);
+	background-color: rgb(76, 221, 57);
 	color: rgb(39, 128, 36);
 	background: red;
 }
 
-  
+.allWords{
+	display: block;
+	width: 100%;
+	padding-left: 10%;
 
-.wordprocessor{
-	background-color: rgba(59, 63, 63, 0.945);
-	height: 1280px;
 }
 
 .theword{
-	color: rgb(238, 245, 232);
-	font-size: 25px;
+	color: rgb(168, 11, 11);
+	font-size: 55px;
+    font-weight: 700;
+	display: block;
+	padding-bottom: 30px;
+}
+
+.firstRow{
+	padding-bottom: 0px!important;
 }
 
 h1{
@@ -99,18 +111,37 @@ h1{
 
 
 
+#word-form{
+	width: 100%;
+}
 
+.enterWord{
+	display: inline-block;
+    text-align: end;
+}
 
+.enterH{
+	padding-top: 12px;
+}
+
+.wordForm{
+	display: inline-block;
+    text-align: left;
+}
+
+.favWordBtn{
+	text-align: start;
+	padding-left: 20px;
+	padding-top: 10px;
+}
 
 
 .Display {
-	width: 50%;
+	width: 100%;
 	height: 55px;
-	background-color: #da7f8bbe;
+	background-color: #a1d9a9be;
 	font-size: 25px;
 	color: rgb(2, 2, 7);
-	align-items: flex-end;
-    flex-direction: column-reverse;
 	margin-bottom: 30px;
 }
 
@@ -154,7 +185,8 @@ h1{
 
 .select{
 	display: block;
-	padding-top: 10px;
+	padding-top: 25px;
+	text-align: center;
 	font-weight: 800;
 }
 
