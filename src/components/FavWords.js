@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import { Button, Modal } from "antd";
+import { 
+  Button,
+   Modal,
+  Popconfirm,
+  message
+ } from "antd";
+
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -18,7 +24,6 @@ const FavWords = (props) => {
 
   //Handles Antonyms button
   const getFavouriteWords = (event) => {
-    let operation = "Antonyms";
 
     fetch("/spring-rest-thesaurus-app/api/favwords")
       .then(res => res.json())
@@ -33,9 +38,9 @@ const FavWords = (props) => {
   const showModal = () => {
     setIsModalVisible(true);
     getFavouriteWords();
-    if(enteredValue.length > 0){
+    if (enteredValue.length > 0) {
       setToggleAddButton(false);
-    }else{
+    } else {
       setToggleAddButton(true);
     }
   };
@@ -52,11 +57,49 @@ const FavWords = (props) => {
   //Add the Word to the MySql Database 
   const handleAddWordToDb = () => {
 
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ favouriteWord: enteredValue })
+    };
+    fetch('/spring-rest-thesaurus-app/api/favwords', requestOptions)
+      .then(response => response.json())
+      .then(data =>{
+        console.log("Succuessfully added " + enteredValue + " to you favourite words list");
+        getFavouriteWords();
+      });
   }
 
 
-  const handleDeleteWord = () => {
 
+  function confirmDelete(wordId) {
+    console.log(wordId);
+
+    fetch('/spring-rest-thesaurus-app/api/favwords/'+wordId, { method: 'DELETE' })
+    .then(() => {
+      message.success('Successfully deleted');
+      getFavouriteWords();
+    });
+  }
+
+
+  
+  function cancel(e) {
+    console.log(e);
+    message.error('Did not delete');
+  }
+
+
+
+
+
+
+
+
+
+  const handleDeleteWord = () => {
+    console.log("delete method clicked")
   }
 
 
@@ -71,10 +114,17 @@ const FavWords = (props) => {
           <div className="row">
             <div className="col-6 col-md-6">
               {favouriteWords.map((word) => (
-                <p
-                  key={word.id}
-                  className=""
-                  onClick={getFavouriteWords}>{word.favouriteWord}<Button type="primary" size={"small"} style={{ marginLeft: '15px' }} onClick={handleDeleteWord}>Delete</Button><hr></hr></p>
+               <div
+               key={word.id}>
+               <p className="favWordp">{word.favouriteWord}</p>
+                  <Popconfirm
+                  title="Are you sure to delete this word?"
+                  onConfirm={() => confirmDelete(word.id)}
+                  onCancel={cancel}
+                  okText="Yes"
+                  cancelText="No">
+                  <Button type="primary" size={"small"}  style={{ marginLeft: '15px' }} >Delete</Button>
+                </Popconfirm><hr className="favwordDivider"></hr></div>
               ))}
             </div>
             <div className="col-6 col-md-6">
@@ -85,7 +135,7 @@ const FavWords = (props) => {
             </div>
           </div>
 
-          <Button type="primary" disabled={toggleAddButton} size={"large"} onClick={getFavouriteWords}>Add Current Word</Button>
+          <Button type="primary" disabled={toggleAddButton} size={"large"} onClick={handleAddWordToDb}>Add Current Word</Button>
         </Modal>
       </div>
     </>

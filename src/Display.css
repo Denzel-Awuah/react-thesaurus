@@ -108,7 +108,14 @@ h1{
 }
 
 
+p{
+	display: inline-block;
+}
 
+
+.favWordp{
+	color: #000;
+}
 
 
 #word-form{
