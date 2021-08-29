@@ -248,7 +248,7 @@ const Display = (props) => {
       <h1 className="title">Welcome to the Word Processor / Thesaurus App!</h1>
 
 
-      <div class="row firstRow">
+      <div className="row firstRow">
       
         <UserInputForm submitEvent={submitEvent} value={value} handleChange={handleChange} />
        
