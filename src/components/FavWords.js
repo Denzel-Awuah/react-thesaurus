@@ -16,7 +16,7 @@ const FavWords = (props) => {
   const [toggleAddButton, setToggleAddButton] = useState(true);
 
   const enteredValue = useSelector((state) => state.value);
-  const words = useSelector((state) => state.allWords);
+  const words = useSelector((state) => state.favwords);
   const dispatch = useDispatch();
 
   // useEffect(() => {
@@ -30,7 +30,7 @@ const FavWords = (props) => {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-       dispatch(wordActions.updateWords(data));
+       dispatch(wordActions.updateFavWords(data));
       })
       .catch(err => console.log(err));
 

@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 
-const initialState = { value: "", allWords: []  }
+const initialState = { value: "", allWords: [], favwords: []  }
 
 const wordSlice = createSlice({
   name: 'word',
@@ -12,6 +12,9 @@ const wordSlice = createSlice({
     },
     updateValue(state, action){
       state.value = action.payload
+    },
+    updateFavWords(state, action){
+      state.favwords = action.payload;
     },
   },
 })
