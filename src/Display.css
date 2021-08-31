@@ -112,9 +112,23 @@ p{
 	display: inline-block;
 }
 
+.favwordDivider{
+	color: black;
+	border: solid black 0.5px;
+}
+
 
 .favWordp{
 	color: #000;
+	
+	font-size: large;
+    font-weight: 500;
+}
+
+.favWordp:hover{
+	cursor: pointer;
+	color: red;
+
 }
 
 
