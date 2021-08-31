@@ -13,7 +13,6 @@ import { wordActions } from './../store'
 const FavWords = (props) => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
- // const [favouriteWords, setFavouriteWords] = useState([]);
   const [toggleAddButton, setToggleAddButton] = useState(true);
 
   const enteredValue = useSelector((state) => state.value);
@@ -63,13 +62,11 @@ const FavWords = (props) => {
   const handleAddWordToDb = () => {
  
 
-
     //Error handling for duplicates
     var duplicate = false;
 
     words.forEach((entry) => {
       if(entry.favouriteWord === enteredValue){
-        console.log("Its already in db");
         message.error("This word is already in your favourite words list");
         duplicate = true;
       }
@@ -110,13 +107,6 @@ const FavWords = (props) => {
     message.error('Did not delete');
   }
 
-  
-
-
-
-
-
-
 
 
 
@@ -127,6 +117,7 @@ const FavWords = (props) => {
 
   const handleUpdateEnteredWord = (e) => {
     dispatch(wordActions.updateValue(e.target.innerHTML))
+    setToggleAddButton(false);
   }
 
 
