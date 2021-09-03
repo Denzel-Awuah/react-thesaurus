@@ -2,31 +2,9 @@
 This app is used to generate a collection of words based on the word/phrase that the user inputs. Users have 6 different operations that they can perform on their entered word/phrase. The Datamuse API is used to generate the listing of words in this application.
 
 ## App preview
-![Application](/public/wordApp.png)
+![Application](/public/v2/thesaurus.png)
 
 <br />
-
-## Operation Buttons
-
-![Application](/public/operations.png)
-
-- Similar Meaning: Generates words with a similar meaning to the entered word <br />
-- Rhymes With:     Generates words that rhyme with the entered word      <br />
-- Starts With:     Uses the entered word to generate words that begin with that prefix       <br />
-- Sounds Like:     Generates words that sound like the entered word      <br />  
-- Synonyms:        Generates a list of synonyms for entered words        <br />
-- Antonyms:        Generates a list of antonyms for entered word         <br />
-
-
-<br />
-
-
-## Words
-![Application](/public/words.png)
-
-- The output of all operations will be displayed here
-- Users can click on a word to change the value of the entered word
-- Once word is changed, operations can be performed on the new word
 
 
 <br />
