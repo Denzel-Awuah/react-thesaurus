@@ -1,5 +1,5 @@
 ## Welcome to the React Word Processor App
-This app is used to generate a collection of words based on the word/phrase that the user inputs. Users have 6 different operations that they can perform on their entered word/phrase. The Datamuse API is used to generate the listing of words in this application. Users can save a collection of favourite words.phrases (stored in MySQL db)
+This app is used to generate a collection of words based on the word/phrase that the user inputs. Users have 6 different operations that they can perform on their entered word/phrase. The Datamuse API is used to generate the listing of words in this application. Users can save a collection of favourite words/phrases (stored in MySQL db)
 
 ## App preview
 ![Application](/public/v2/thesaurus.png)
